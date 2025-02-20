@@ -16,7 +16,7 @@ DB_NAME = os.getenv("DB_NAME", "")
 
 IS_FSUB = bool(os.environ.get("FSUB", True)) # Set "True" For Force Subscribe Enable
 AUTH_CHANNELS = os.environ.get("AUTH_CHANNEL", "") # Add Multiple Channels iD By Space
-AUTH_CHANNELS = [int(channel_id) for channel_id in AUTH_CHANNELS.split(",")] # DONT TOUCH
+AUTH_CHANNELS = [int(channel_id) for channel_id in AUTH_CHANNELS.split("")] # DONT TOUCH
 
 ENABLE_FLOOD_WAIT = bool(os.getenv("ENABLE_FLOOD_WAIT", False)) # Set "True" For Enable Floodwait
 FLOOD_WAIT_TIME = int(os.getenv("FLOOD_WAIT_TIME", 300)) #5min
